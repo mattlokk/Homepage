@@ -2,20 +2,17 @@
 <html>
 
 <head>
-  <title>Home Page</title>
-  <style type="text/css">
-    .personal {
-      width: 100%;
-      height: 200px;
-    }
+    <title>Home Page</title>
+    <style type="text/css">
+        html {
+            background-color: #666;
+        }
 
-    .section {
-      float: left;
-      min-width: 220px;
-      border: 1px solid #ddd;
-      margin: 10px;
-      padding: 10px;
-    }
+        a {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: #1c3d53;
+        }
 
     .section ul {
       float: left;
@@ -27,37 +24,54 @@
     #edge{
       display: none;
     }
-  </style>
+        a:hover{
+            color: #555;
+        }
 
-  <script type="text/javascript">
-    function init() {
-      let userAgent = navigator.userAgent;
+        .personal {
+            width: 100%;
+            height: 300px;
+        }
+        .section {
+            float: left;
+            min-width: 220px;
+            border: 1px solid #1c3d53;
+            margin: 10px;
+            padding: 10px;
+        }
 
-      if (userAgent.match(/edg/i)) {
-        document.getElementById("edge").style.display = "block"
-      }
-      else {
-        document.getElementById("ffchrome").style.display = "block"
-      }
+            .section ul {
+                float: left;
+            }
+    </style>
 
+    <script type="text/javascript">
+        function init() {
+            let userAgent = navigator.userAgent;
 
-      // if (userAgent.match(/edg/i)) {
-      //   alert("edge");
-      // } else if (userAgent.match(/firefox|fxios/i)) {
-      //   alert("firefox");
-      // } else if (userAgent.match(/safari/i)) {
-      //   alert("safari");
-      // } else if (userAgent.match(/opr\//i)) {
-      //   alert("opera");
-      // } else if (userAgent.match(/chrome|chromium|crios/i)) {
-      //   alert("chrome");
-      // }
-      // else {
-      //   alert("No browser detection");
-      // }
-    }
+            if (userAgent.match(/edg/i)) {
+              document.getElementById("edge").style.display = "block"
+            }
+            else {
+              document.getElementById("ffchrome").style.display = "block"
+            }
+            // if (userAgent.match(/edg/i)) {
+            //   alert("edge");
+            // } else if (userAgent.match(/firefox|fxios/i)) {
+            //   alert("firefox");
+            // } else if (userAgent.match(/safari/i)) {
+            //   alert("safari");
+            // } else if (userAgent.match(/opr\//i)) {
+            //   alert("opera");
+            // } else if (userAgent.match(/chrome|chromium|crios/i)) {
+            //   alert("chrome");
+            // }
+            // else {
+            //   alert("No browser detection");
+            // }
+        }
 
-  </script>
+    </script>
 </head>
 
 <body onload="init()">
@@ -217,5 +231,4 @@
       </div>
     </div>
 </body>
-
 </html>
