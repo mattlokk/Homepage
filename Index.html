@@ -20,11 +20,26 @@
     .section ul {
       float: left;
     }
+
+    #ffchrome{
+      display: none;
+    }
+    #edge{
+      display: none;
+    }
   </style>
 
   <script type="text/javascript">
     function init() {
       let userAgent = navigator.userAgent;
+
+      if (userAgent.match(/edg/i)) {
+        document.getElementById("edge").style.display = "block"
+      }
+      else {
+        document.getElementById("ffchrome").style.display = "block"
+      }
+
 
       // if (userAgent.match(/edg/i)) {
       //   alert("edge");
@@ -46,7 +61,7 @@
 </head>
 
 <body onload="init()">
-  <div class="chrome">
+  <div id="ffchrome">
     <div class="personal">
       <div class="section">
         <span>Social</span>
@@ -124,33 +139,30 @@
         </ul>
       </div>
     </div>
+  </div>
+  <div id="edge">
     <div>
       <div class="section">
         <span>Work Links</span>
         <br />
         <ul>
-          
-
           <li>
-            <a href="http://dragon/deploy/app#/" target="_blank">Octopus Deploy</a>
+            <a href="https://outlook.office.com/mail/inbox" target="_blank">Outlook</a>
           </li>
           <li>
             <a href="https://servicemonster818.workplace.com/" target="_blank">Workplace</a>
           </li>
           <li>
-            <a href="https://developer.servicemonster.net/" target="_blank">Dev Docs</a>
-          </li>
-          <li>
             <a href="https://principalfocus-my.sharepoint.com/personal/emccleskey_servicemonster_net/_layouts/15/onedrive.aspx?ct=1590623353095&or=OWA%2DNT&cid=810aa762%2D5e71%2D7958%2Dfc0a%2Dfa6239258edb&originalPath=aHR0cHM6Ly9wcmluY2lwYWxmb2N1cy1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9lbWNjbGVza2V5X3NlcnZpY2Vtb25zdGVyX25ldC9FdG1Zb1J2dE5LNU5oZEwxaldnX0dXRUItSV9YLVRxeHhqMDV6QjRmWE14X2pRP3J0aW1lPWFJa29qNWdDMkVn&id=%2Fpersonal%2Femccleskey%5Fservicemonster%5Fnet%2FDocuments%2FTimesheets%20%2D%20Dev%2FAndersonMatt"
               target="_blank">Timesheets</a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/" target="_blank">Google Drive</a>
           </li>
         </ul>
         <ul>
           <li>
             <a href="http://localhost:53905/desktop#home" target="_blank">SM 6 - Local</a>
-          </li>
-          <li>
-            <a href="http://dragon/sm6/desktop#home" target="_blank">SM 6 - Dragon</a>
           </li>
           <li>
             <a href="https://west-stage.servicemonster.net/sm6" target="_blank">SM 6 - Stage</a>
@@ -167,9 +179,6 @@
             <a href="http://localhost:60861/Default.aspx" target="_blank">CC - Local</a>
           </li>
           <li>
-            <a href="http://dragon/sm6/callcenter" target="_blank">CC - Dragon</a>
-          </li>
-          <li>
             <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">CC - Stage</a>
           </li>
           <li>
@@ -181,12 +190,19 @@
         </ul>
         <ul>
           <li>
-            <a href="http://localhost:51683/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
-              target="_blank">WebForms - Local</a>
+            <a href="http://localhost:54615/MyBusiness/Default.aspx" target="_blank">CRM - Local</a>
           </li>
           <li>
-            <a href="http://dragon/sm_webforms/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
-              target="_blank">WebForms - Dragon</a>
+            <a href="http://west-stage.principalfocus.net/crm/" target="_blank">CRM - Stage</a>
+          </li>
+          <li>
+            <a href="https://crm.principalfocus.net/" target="_blank">CRM - Production</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="http://localhost:51683/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
+              target="_blank">WebForms - Local</a>
           </li>
           <li>
             <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">WebForms - Stage</a>
@@ -200,157 +216,6 @@
         </ul>
       </div>
     </div>
-  <!-- </div>
-  <div class="firefox">
-    <div class="personal">
-      <div class="section">
-        <span>Social</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://www.reddit.com" target="_blank">Reddit</a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank">Twitter</a>
-          </li>
-          <li>
-            <a href="https://mail.google.com" target="_blank">Gmail</a>
-          </li>
-          <li>
-            <a href="https://mail.yahoo.com" target="_blank">Yahoo Mail</a>
-          </li>
-        </ul>
-      </div>
-      <div class="section">
-        <span>Football</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://football.fantasysports.yahoo.com/f1/632271" target="_blank">Yahoo! Fantasy League</a>
-          </li>
-          <li>
-            <a href="https://www.reddit.com/r/fantasyfootball" target="_blank">r/FantasyFootball</a>
-          </li>
-          <li>
-            <a href="https://www.fantasypros.com/nfl/myplaybook/cheat-sheets.php" target="_blank">Fantasy Pros</a>
-          </li>
-          <li>
-            <a href="http://www.borischen.co/">Boris Chen Tier Charts</a>
-          </li>
-        </ul>
-      </div>
-      <div class="section">
-        <span>Shopping</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://slickdeals.net/" target="_blank">Slick Deals</a>
-          </li>
-          <li>
-            <a href="https://www.amazon.com/" target="_blank">Amazon</a>
-          </li>
-        </ul>
-      </div>
-      <div class="section">
-        <span>Media</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-          </li>
-          <li>
-            <a href="https://tv.youtube.com/" target="_blank">YouTube TV</a>
-          </li>
-          <li>
-            <a href="http://10.0.0.208:32400/web/index.html" target="_blank">Plex</a>
-          </li>
-          <li>
-            <a href="https://www.amazon.com/gp/video/storefront" target="_blank">Prime Video</a>
-          </li>
-          <li>
-            <a href="https://www.netflix.com/" target="_blank">Netflix</a>
-          </li>
-          <li>
-            <a href="http://10.0.0.206:9091/transmission/web/#upload">Transmission</a>
-          </li>
-          <li>
-            <a href="https://www.twitch.tv/" target="_blank">Twitch</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <div class="section">
-        <span>Work Links</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://servicemonster818.workplace.com/" target="_blank">Workplace</a>
-          </li>
-          <li>
-            <a href="https://developer.servicemonster.net/" target="_blank">Dev Docs</a>
-          </li>
-          <li>
-            <a href="https://principalfocus-my.sharepoint.com/personal/emccleskey_servicemonster_net/_layouts/15/onedrive.aspx?ct=1590623353095&or=OWA%2DNT&cid=810aa762%2D5e71%2D7958%2Dfc0a%2Dfa6239258edb&originalPath=aHR0cHM6Ly9wcmluY2lwYWxmb2N1cy1teS5zaGFyZXBvaW50LmNvbS86ZjovZy9wZXJzb25hbC9lbWNjbGVza2V5X3NlcnZpY2Vtb25zdGVyX25ldC9FdG1Zb1J2dE5LNU5oZEwxaldnX0dXRUItSV9YLVRxeHhqMDV6QjRmWE14X2pRP3J0aW1lPWFJa29qNWdDMkVn&id=%2Fpersonal%2Femccleskey%5Fservicemonster%5Fnet%2FDocuments%2FTimesheets%20%2D%20Dev%2FAndersonMatt"
-              target="_blank">Timesheets</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://localhost:53905/desktop#home" target="_blank">SM 6 - Local</a>
-          </li>
-          <li>
-            <a href="http://dragon/sm6/desktop#home" target="_blank">SM 6 - Dragon</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/sm6" target="_blank">SM 6 - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/sm6" target="_blank">SM 6 - Test</a>
-          </li>
-          <li>
-            <a href="http://six.servicemonster.net" target="_blank">SM 6 - Production</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://localhost:60861/Default.aspx" target="_blank">CC - Local</a>
-          </li>
-          <li>
-            <a href="http://dragon/sm6/callcenter" target="_blank">CC - Dragon</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">CC - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/callcenter" target="_blank">CC - Test</a>
-          </li>
-          <li>
-            <a href="http://cc.servicemonster.net" target="_blank">CC - Production</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://localhost:51683/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
-              target="_blank">WebForms - Local</a>
-          </li>
-          <li>
-            <a href="http://dragon/sm_webforms/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
-              target="_blank">WebForms - Dragon</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">WebForms - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/callcenter" target="_blank">WebForms - Test</a>
-          </li>
-          <li>
-            <a href="http://cc.servicemonster.net" target="_blank">WebForms - Production</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> -->
 </body>
 
 </html>
