@@ -2,77 +2,80 @@
 <html>
 
 <head>
-    <title>Home Page</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <style type="text/css">
-        html {
-            background-color: #666;
-        }
+  <title>Home Page</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style type="text/css">
+    html {
+      background-color: #666;
+    }
 
-        a {
-            font-size: 1.7em;
-            font-weight: bold;
-            color: #1c3d53;
-        }
+    a {
+      font-size: 1.7em;
+      font-weight: bold;
+      color: #1c3d53;
+    }
 
     .section ul {
       float: left;
     }
 
-    #ffchrome{
+    #ffchrome {
       display: none;
     }
-    #edge{
+
+    #edge {
       display: none;
     }
-        a:hover{
-            color: #555;
-        }
 
-        .personal {
-            width: 100%;
-            height: 300px;
-        }
-        .section {
-            float: left;
-            min-width: 220px;
-            border: 1px solid #1c3d53;
-            margin: 10px;
-            padding: 10px;
-        }
+    a:hover {
+      color: #555;
+    }
 
-            .section ul {
-                float: left;
-            }
-    </style>
+    .personal {
+      width: 100%;
+      height: 300px;
+    }
 
-    <script type="text/javascript">
-        function init() {
-            let userAgent = navigator.userAgent;
+    .section {
+      float: left;
+      min-width: 220px;
+      border: 1px solid #1c3d53;
+      margin: 10px;
+      padding: 10px;
+    }
 
-            if (userAgent.match(/edg/i)) {
-              document.getElementById("edge").style.display = "block"
-            }
-            else {
-              document.getElementById("ffchrome").style.display = "block"
-            }
-            // if (userAgent.match(/edg/i)) {
-            //   alert("edge");
-            // } else if (userAgent.match(/firefox|fxios/i)) {
-            //   alert("firefox");
-            // } else if (userAgent.match(/safari/i)) {
-            //   alert("safari");
-            // } else if (userAgent.match(/opr\//i)) {
-            //   alert("opera");
-            // } else if (userAgent.match(/chrome|chromium|crios/i)) {
-            //   alert("chrome");
-            // }
-            // else {
-            //   alert("No browser detection");
-            // }
-        }
+    .section ul {
+      float: left;
+    }
+  </style>
 
-    </script>
+  <script type="text/javascript">
+    function init() {
+      let userAgent = navigator.userAgent;
+
+      if (userAgent.match(/edg/i)) {
+        document.getElementById("edge").style.display = "block"
+      }
+      else {
+        document.getElementById("ffchrome").style.display = "block"
+      }
+      // if (userAgent.match(/edg/i)) {
+      //   alert("edge");
+      // } else if (userAgent.match(/firefox|fxios/i)) {
+      //   alert("firefox");
+      // } else if (userAgent.match(/safari/i)) {
+      //   alert("safari");
+      // } else if (userAgent.match(/opr\//i)) {
+      //   alert("opera");
+      // } else if (userAgent.match(/chrome|chromium|crios/i)) {
+      //   alert("chrome");
+      // }
+      // else {
+      //   alert("No browser detection");
+      // }
+    }
+
+  </script>
 </head>
 
 <body onload="init()">
@@ -136,12 +139,6 @@
           <li>
             <a href="https://home.personalcapital.com/page/login/app#/dashboard" target="_blank">Empower</a>
           </li>
-          <li>
-            <a href="http://anderserv:81" target="_blank">Cabbage</a>
-          </li>
-          <li>
-            <a href="http://localhost:5173/" target="_blank">Cabbage (localhost)</a>
-          </li>
         </ul>
       </div>
       <div class="section">
@@ -161,113 +158,49 @@
             <a href="https://www.hulu.com/" target="_blank">Hulu</a>
           </li>
           <li>
-            <a href="http://anderserv:9091/transmission/web/#upload" target="_blank">Transmission</a>
+            <a href="https://www.twitch.tv/" target="_blank">Twitch</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <span>Cabbage</span>
+        <br />
+        <ul>
+          <li>
+            <a href="https://portal.azure.com/#home" target="_blank">Azure Portal</a>
           </li>
           <li>
-            <a href="https://www.twitch.tv/" target="_blank">Twitch</a>
+            <a href="https://github.com/mattlokk/Cabbage" target="_blank">Repository</a>
+          </li>
+          <li>
+            <a href="http://localhost:5173/" target="_blank">Cabbage (localhost)</a>
+          </li>
+          <li>
+            <a href="http://anderserv:81" target="_blank">Cabbage (anderserv)</a>
+          </li>
+          <li>
+            <a href="https://red-glacier-0809d021e.2.azurestaticapps.net/" target="_blank">Cabbage (azure)</a>
+          </li>
+        </ul>
+      <div class="section">
+        <span>Anderserv</span>
+        <br />
+        <ul>
+          <li>
+            <a href="http://anderserv" target="_blank">OpenMediaVault</a>
+          </li>
+          <li>
+            <a href="http://anderserv:9000" target="_blank">Portainer (admin)</a>
           </li>
           <li>
             <a href="http://anderserv:8096/web/" target="_blank">Jellyfin</a>
           </li>
           <li>
-            <a href="http://anderserv" target="_blank">OpenMediaVault</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div id="edge">
-    <div>
-      <div class="section">
-        <span>Work Links</span>
-        <br />
-        <ul>
-          <li>
-            <a href="https://copilot.cloud.microsoft/" target="_blank">Copilot</a>
-          </li>
-          <li>
-            <a href="https://outlook.office.com/mail/inbox" target="_blank">Outlook</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/" target="_blank">Google Drive</a>
-          </li>
-          <li>
-            <a href="https://servicemonster.atlassian.net/jira/software/c/projects/SM/boards/11" target="_blank">Jira</a>
-          </li>
-          <li>
-            <a href="https://us-west-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA2ERYO7XYNCSPSV4Q&X-Amz-Date=2023-05-11T21%3A19%3A10.232Z&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMSJIMEYCIQCsEiIEPXmQZrddPi51lSWOmOijy3hD4MUZmqjWij7GoQIhAL124%2BC0Qo5cr30gzdWleEijPDAq6iTBOtBrqe%2BPeLSRKuEDCK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMNjk2OTc2ODY2ODAwIgz49TOrkaJJxN2%2Bu%2BsqtQNJlMO2C%2B5yqo87Mu0k1uqqMRrzLGRhIiWaMvgluT21bp%2BFZHhg6X40cImlubeO4rFSTNcMr5qqpC6ec0FRjO71sptVJ0ngnVMpIqI8tNxmN5Zq6so6nGhrnIZeMQRg0dXDY9m9pY9q98nJ4jszWlFTD9mNewKmSTUYGP0%2BS8rFHaBC%2FCDwKQSH58b7U%2F226VAtur1i9Z%2Ff8nsgkEMWwXauRMTUjCakXBte%2F1cRHi3GAFlBhD2syDGvuQlEVaM%2BHap11OofVU2gKzGtOzcuTTPALlSOWKf1f0V%2FdNV2GPbMuCeRie82CPgY8%2BRjWh7iqz8X1obF5eef36do%2Bp2xYJfwVk2RhNgkX0ccnCkdXE55E2FZzZ0sZ5dv0kEpQGUI1p7m0fEEgwtw%2FlsXD49WF0PE3L7EfuSa%2FUzXiyNOXsS5t7WzEiEaU3s9WcxDwluMlDKYEnNJuwVFH1TdlsMI2Ncup3n7scxvFHD8gYNgV1v%2FSheWW4k7HRDLNbdCxdgQvTYqXUHt5l03y28VaC8Poxiqc%2BlVb6Y6ZX9JaUWX3MbquBtYt5Lt77f1jLGsD%2F01BkUJkq%2FsuDCcrfWiBjqgAVqUCRJ1Qbf6OnuvmJPH1IT7%2FZVYTSwqpg2SaeC3vzmSEU2EeznYKqIVckIBgAXGvIW7m8tlQ6Bg98JS6vykcPokaQoMIPOq6qYgWt9c39o6CI5gYC1d0mJ5SvqTbLmWtlWzTR8dBVT%2BJHu3PsMMyS4AZxTUigtB8NBF%2F%2BCuffeDyHzmGdpbUWz3VaSeqzcFSTqwyANDBGIOwusDaHEqaGU%3D&X-Amz-Signature=60165e06bf107d1389b27d0d754ed402f99a177e63a6f3dea9443ea589ca8cc5&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fec2&code_challenge=vgOXl5RWGxOT9iE7JDm3EDxZZ9RpS5k2NfnVVQMA8TE&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fus-west-1.console.aws.amazon.com%2Fec2%2Fhome%3Fregion%3Dus-west-1%26state%3DhashArgs%2523Instances%253A%26isauthcode%3Dtrue&region=us-west-1&response_type=code&state=hashArgs%23Instances%3A" target="_blank">
-              Amazon Console
-            </a>
-          </li>
-          <li>
-            <a href="https://deploy.servicemonster.net/" target="_blank">
-              Octopus Deploy
-            </a>
-          </li>  
-          <li>
-            <a href="https://identity.trinet.com/" target="_blank">
-              Trinet
-            </a>
-          </li>          
-        </ul>
-        <ul>
-          <li>
-            <a href="https://localhost:44393/sm6/desktop#home" target="_blank">SM 6 - Local</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/sm6" target="_blank">SM 6 - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/sm6" target="_blank">SM 6 - Test</a>
-          </li>
-          <li>
-            <a href="http://six.servicemonster.net" target="_blank">SM 6 - Production</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://localhost:60861/Default.aspx" target="_blank">CC - Local</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">CC - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/callcenter" target="_blank">CC - Test</a>
-          </li>
-          <li>
-            <a href="http://cc.servicemonster.net" target="_blank">CC - Production</a>
-          </li>
-          <li>
-            <a href="https://servicemonster.chemdry.co.nz/cc/" target="_blank">CC - CD NZ</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="https://localhost:44376/MyBusiness/Default.aspx" target="_blank">CRM - Local</a>
-          </li>
-          <li>
-            <a href="http://west-stage.principalfocus.net/crm/" target="_blank">CRM - Stage</a>
-          </li>
-          <li>
-            <a href="https://crm.principalfocus.net/" target="_blank">CRM - Production</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://localhost:51683/checkout/acme_carpet_cleaning/ZjY0cVoyNndvdFM3YVJnV2U4WFkxajdhcHBHQTZlblAwRlJERWRwQzFXOCUzZA==/sample"
-              target="_blank">WebForms - Local</a>
-          </li>
-          <li>
-            <a href="https://west-stage.servicemonster.net/callcenter" target="_blank">WebForms - Stage</a>
-          </li>
-          <li>
-            <a href="https://west-test.servicemonster.net/callcenter" target="_blank">WebForms - Test</a>
-          </li>
-          <li>
-            <a href="http://cc.servicemonster.net" target="_blank">WebForms - Production</a>
+            <a href="http://anderserv:9091/transmission/web/#upload" target="_blank">Transmission</a>
           </li>
         </ul>
       </div>
     </div>
 </body>
+
 </html>
